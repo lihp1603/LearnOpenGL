@@ -127,7 +127,7 @@ int main()
 
     // uncomment this call to draw in wireframe polygons.
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-
+	
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
@@ -145,6 +145,9 @@ int main()
         glUseProgram(shaderProgram);
         glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
         glDrawArrays(GL_TRIANGLES, 0, 3);
+		//glDrawArrays(GL_LINES, 0, 3);//只绘制了第一个顶点和第二个顶点的连接线段
+		//glDrawArrays(GL_LINE_LOOP, 0, 3);//封闭循环线
+		//glDrawArrays(GL_LINE_STRIP, 0, 3);//连接线
         // glBindVertexArray(0); // no need to unbind it every time 
  
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)

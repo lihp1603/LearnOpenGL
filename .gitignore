@@ -1,3 +1,10 @@
 # ignores following folders
 bin/
 build/
+Debug/*
+ipch/*
+*.opensdf
+*.sdf
+*.log
+*.lastbuildstate
+*.ipch
