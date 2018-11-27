@@ -11,10 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{CA356994-D7E2-4221-A7CF-36F88F75C3D0}</ProjectGuid>
+    <ProjectGuid>{54DB59AE-A8C1-4B0C-8906-355B43883FCB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>hello_triangle</RootNamespace>
-    <ProjectName>2.1.hello_triangle</ProjectName>
+    <RootNamespace>My41textures</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -40,8 +39,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../../../../../includes;$(IncludePath)</IncludePath>
-    <LibraryPath>../../../../../lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>../../../../includes;../../../../configuration;$(IncludePath)</IncludePath>
+    <LibraryPath>../../../../lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -60,8 +59,6 @@
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>
       </IgnoreAllDefaultLibraries>
-      <IgnoreSpecificDefaultLibraries>
-      </IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -82,8 +79,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\src\1.getting_started\2.1.hello_triangle\hello_triangle.cpp" />
-    <ClCompile Include="..\..\..\..\..\src\glad.c" />
+    <ClCompile Include="..\..\..\..\src\1.getting_started\4.1.textures\textures.cpp" />
+    <ClCompile Include="..\..\..\..\src\glad.c" />
+    <ClCompile Include="..\..\..\..\src\stb_image.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

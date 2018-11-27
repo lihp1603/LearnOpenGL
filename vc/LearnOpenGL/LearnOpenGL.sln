@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hello_triangle", "1.getting_started\2.1.hello_triangle\hello_triangle\hello_triangle.vcxproj", "{CA356994-D7E2-4221-A7CF-36F88F75C3D0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.1.hello_triangle", "1.getting_started\2.1.hello_triangle\hello_triangle\hello_triangle.vcxproj", "{CA356994-D7E2-4221-A7CF-36F88F75C3D0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hello_triangle_indexed", "1.getting_started\2.2.hello_triangle_indexed\hello_triangle_indexed\hello_triangle_indexed.vcxproj", "{BC08DC02-E865-4923-A345-1BB7824B9B51}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.2.hello_triangle_indexed", "1.getting_started\2.2.hello_triangle_indexed\hello_triangle_indexed\hello_triangle_indexed.vcxproj", "{BC08DC02-E865-4923-A345-1BB7824B9B51}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.1.textures", "1.getting_started\4.1.textures\4.1.textures.vcxproj", "{54DB59AE-A8C1-4B0C-8906-355B43883FCB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5.1.transformations", "1.getting_started\5.1.transformations\5.1.transformations.vcxproj", "{743AAD92-48AA-41AF-9378-9C46BB3CD4B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +23,14 @@ Global
 		{BC08DC02-E865-4923-A345-1BB7824B9B51}.Debug|Win32.Build.0 = Debug|Win32
 		{BC08DC02-E865-4923-A345-1BB7824B9B51}.Release|Win32.ActiveCfg = Release|Win32
 		{BC08DC02-E865-4923-A345-1BB7824B9B51}.Release|Win32.Build.0 = Release|Win32
+		{54DB59AE-A8C1-4B0C-8906-355B43883FCB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{54DB59AE-A8C1-4B0C-8906-355B43883FCB}.Debug|Win32.Build.0 = Debug|Win32
+		{54DB59AE-A8C1-4B0C-8906-355B43883FCB}.Release|Win32.ActiveCfg = Release|Win32
+		{54DB59AE-A8C1-4B0C-8906-355B43883FCB}.Release|Win32.Build.0 = Release|Win32
+		{743AAD92-48AA-41AF-9378-9C46BB3CD4B1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{743AAD92-48AA-41AF-9378-9C46BB3CD4B1}.Debug|Win32.Build.0 = Debug|Win32
+		{743AAD92-48AA-41AF-9378-9C46BB3CD4B1}.Release|Win32.ActiveCfg = Release|Win32
+		{743AAD92-48AA-41AF-9378-9C46BB3CD4B1}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

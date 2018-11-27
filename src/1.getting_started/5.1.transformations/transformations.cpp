@@ -53,7 +53,8 @@ int main()
 
     // build and compile our shader zprogram
     // ------------------------------------
-    Shader ourShader("5.1.transform.vs", "5.1.transform.fs");
+    //Shader ourShader("..\\..\\..\\..\\src\\1.getting_started\\5.1.transformations\\5.1.transform.vs", "..\\..\\..\\..\\src\\1.getting_started\\5.1.transformations\\5.1.transform.fs");
+	Shader ourShader("F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\1.getting_started\\5.1.transformations\\5.1.transform.vs", "F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\1.getting_started\\5.1.transformations\\5.1.transform.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
