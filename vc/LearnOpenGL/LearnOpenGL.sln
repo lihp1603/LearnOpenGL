@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.1.textures", "1.getting_s
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5.1.transformations", "1.getting_started\5.1.transformations\5.1.transformations.vcxproj", "{743AAD92-48AA-41AF-9378-9C46BB3CD4B1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.1.coordinate_systems", "1.getting_started\6.1.coordinate_systems\6.1.coordinate_systems.vcxproj", "{2BEB1CE8-4962-4F33-B23E-BB3D16243578}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -31,6 +33,10 @@ Global
 		{743AAD92-48AA-41AF-9378-9C46BB3CD4B1}.Debug|Win32.Build.0 = Debug|Win32
 		{743AAD92-48AA-41AF-9378-9C46BB3CD4B1}.Release|Win32.ActiveCfg = Release|Win32
 		{743AAD92-48AA-41AF-9378-9C46BB3CD4B1}.Release|Win32.Build.0 = Release|Win32
+		{2BEB1CE8-4962-4F33-B23E-BB3D16243578}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2BEB1CE8-4962-4F33-B23E-BB3D16243578}.Debug|Win32.Build.0 = Debug|Win32
+		{2BEB1CE8-4962-4F33-B23E-BB3D16243578}.Release|Win32.ActiveCfg = Release|Win32
+		{2BEB1CE8-4962-4F33-B23E-BB3D16243578}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -53,7 +53,10 @@ int main()
 
     // build and compile our shader zprogram
     // ------------------------------------
-    Shader ourShader("6.1.coordinate_systems.vs", "6.1.coordinate_systems.fs");
+    //Shader ourShader("6.1.coordinate_systems.vs", "6.1.coordinate_systems.fs");
+	Shader ourShader("F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\1.getting_started\\6.1.coordinate_systems\\6.1.coordinate_systems.vs",
+		"F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\1.getting_started\\6.1.coordinate_systems\\6.1.coordinate_systems.fs");
+	
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -161,25 +164,38 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         // bind textures on corresponding texture units
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, texture1);
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, texture2);
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, texture1);
+		glActiveTexture(GL_TEXTURE1);
+		glBindTexture(GL_TEXTURE_2D, texture2);
+		//测试下交换顺序
+		//glActiveTexture(GL_TEXTURE0);
+		//glBindTexture(GL_TEXTURE_2D, texture1);
+		//glActiveTexture(GL_TEXTURE1);
+		//glBindTexture(GL_TEXTURE_2D, texture2);
   
         // activate shader
         ourShader.use();
       
         // create transformations
+		//默认都是单位矩阵
         glm::mat4 model;
         glm::mat4 view;
         glm::mat4 projection;
+		//模型矩阵:沿x轴旋转-55度;glm::vec3(1.0f, 0.0f, 0.0f)表示沿x轴旋转，-55度代表旋转角度
         model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+		//观察矩阵:这里表示位移，沿z轴位移-3个单位，glm::vec3(0.0f, 0.0f, -3.0f)
         view  = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+		//投影矩阵:透视投影
+		//perspective第一个参数为视野;第二个参数为宽高比;第三个参数，第四个参数为设置平截体的近距离和远距离
         projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
         // retrieve the matrix uniform locations
         unsigned int modelLoc = glGetUniformLocation(ourShader.ID, "model");
         unsigned int viewLoc  = glGetUniformLocation(ourShader.ID, "view");
         // pass them to the shaders (3 different ways)
+		//通过三种不同的方式来传输一个矩阵到uniform变量矩阵上去
+		//第二个参数为count代表数量，这里为1，代表加载一个4x4的矩阵
+		//第三个参数为false的时候，代表矩阵为列主序;true为行主序
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, &view[0][0]);
         // note: currently we set the projection matrix each frame, but since the projection matrix rarely changes it's often best practice to set it outside the main loop only once.
