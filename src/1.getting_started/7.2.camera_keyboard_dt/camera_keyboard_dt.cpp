@@ -66,7 +66,9 @@ int main()
 
     // build and compile our shader zprogram
     // ------------------------------------
-    Shader ourShader("7.2.camera.vs", "7.2.camera.fs");
+    //Shader ourShader("7.2.camera.vs", "7.2.camera.fs");
+	Shader ourShader("F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\1.getting_started\\7.2.camera_keyboard_dt\\7.2.camera.vs", 
+		"F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\1.getting_started\\7.2.camera_keyboard_dt\\7.2.camera.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------

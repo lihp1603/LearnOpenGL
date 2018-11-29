@@ -57,7 +57,10 @@ int main()
 
     // build and compile our shader zprogram
     // ------------------------------------
-    Shader ourShader("7.1.camera.vs", "7.1.camera.fs");
+    //Shader ourShader("7.1.camera.vs", "7.1.camera.fs");
+
+	Shader ourShader("F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\1.getting_started\\7.1.camera_circle\\7.1.camera.vs", 
+		"F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\1.getting_started\\7.1.camera_circle\\7.1.camera.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -224,7 +227,8 @@ int main()
         float radius = 10.0f;
         float camX   = sin(glfwGetTime()) * radius;
         float camZ   = cos(glfwGetTime()) * radius;
-        view = glm::lookAt(glm::vec3(camX, 0.0f, camZ), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		//向上量的正负会影响旋转方向
+        view = glm::lookAt(glm::vec3(camX, 0.0f,camZ), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
         ourShader.setMat4("view", view);
 
         // render boxes
