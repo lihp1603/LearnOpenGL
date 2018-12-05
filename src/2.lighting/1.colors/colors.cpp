@@ -30,8 +30,10 @@ bool firstMouse = true;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
+//定义位移
 // lighting
-glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
+//glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
+glm::vec3 lightPos(0.25f, 0.5f, 2.0f);
 
 int main()
 {
@@ -77,8 +79,14 @@ int main()
 
     // build and compile our shader zprogram
     // ------------------------------------
-    Shader lightingShader("1.colors.vs", "1.colors.fs");
-    Shader lampShader("1.lamp.vs", "1.lamp.fs");
+   /* Shader lightingShader("1.colors.vs", "1.colors.fs");
+    Shader lampShader("1.lamp.vs", "1.lamp.fs");*/
+
+
+	Shader lightingShader("F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\2.lighting\\1.colors\\1.colors.vs", 
+						 "F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\2.lighting\\1.colors\\1.colors.fs");
+	Shader lampShader("F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\2.lighting\\1.colors\\1.lamp.vs", 
+					  "F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\2.lighting\\1.colors\\1.lamp.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -183,6 +191,8 @@ int main()
 
         // world transformation
         glm::mat4 model;
+		//添加一个旋转角度进行测试
+		//model = glm::rotate(model,glm::radians(30.0f),glm::vec3(0.0f,1.0f,0.0f));
         lightingShader.setMat4("model", model);
 
         // render the cube
@@ -195,7 +205,9 @@ int main()
         lampShader.setMat4("projection", projection);
         lampShader.setMat4("view", view);
         model = glm::mat4();
+		//位移
         model = glm::translate(model, lightPos);
+		//缩放
         model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
         lampShader.setMat4("model", model);
 

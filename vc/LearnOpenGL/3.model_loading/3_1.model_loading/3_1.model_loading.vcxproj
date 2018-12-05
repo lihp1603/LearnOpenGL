@@ -11,10 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{BC08DC02-E865-4923-A345-1BB7824B9B51}</ProjectGuid>
+    <ProjectGuid>{9413A687-D5BE-4433-9481-605692D4412C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>hello_triangle_indexed</RootNamespace>
-    <ProjectName>1_2.2.hello_triangle_indexed</ProjectName>
+    <RootNamespace>My3_1model_loading</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -40,8 +39,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../../../../../includes;$(IncludePath)</IncludePath>
-    <LibraryPath>../../../../../lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>../../../../configuration;../../../../includes;$(IncludePath)</IncludePath>
+    <LibraryPath>../../../../lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -57,7 +56,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -78,8 +77,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\src\1.getting_started\2.2.hello_triangle_indexed\hello_triangle_indexed.cpp" />
-    <ClCompile Include="..\..\..\..\..\src\glad.c" />
+    <None Include="..\..\..\..\src\3.model_loading\1.model_loading\1.model_loading.fs" />
+    <None Include="..\..\..\..\src\3.model_loading\1.model_loading\1.model_loading.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\3.model_loading\1.model_loading\model_loading.cpp" />
+    <ClCompile Include="..\..\..\..\src\glad.c" />
+    <ClCompile Include="..\..\..\..\src\stb_image.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\includes\learnopengl\camera.h" />
+    <ClInclude Include="..\..\..\..\includes\learnopengl\mesh.h" />
+    <ClInclude Include="..\..\..\..\includes\learnopengl\model.h" />
+    <ClInclude Include="..\..\..\..\includes\learnopengl\shader_m.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
