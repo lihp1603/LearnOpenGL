@@ -77,8 +77,13 @@ int main()
 
     // build and compile shaders
     // -------------------------
-    Shader shader("5.1.framebuffers.vs", "5.1.framebuffers.fs");
-    Shader screenShader("5.1.framebuffers_screen.vs", "5.1.framebuffers_screen.fs");
+    //Shader shader("5.1.framebuffers.vs", "5.1.framebuffers.fs");
+    //Shader screenShader("5.1.framebuffers_screen.vs", "5.1.framebuffers_screen.fs");
+
+	Shader shader("F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\4.advanced_opengl\\5.1.framebuffers\\5.1.framebuffers.vs", 
+		"F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\4.advanced_opengl\\5.1.framebuffers\\5.1.framebuffers.fs");
+	Shader screenShader("F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\4.advanced_opengl\\5.1.framebuffers\\5.1.framebuffers_screen.vs",
+		"F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\4.advanced_opengl\\5.1.framebuffers\\5.1.framebuffers_screen.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -234,13 +239,16 @@ int main()
         // -----
         processInput(window);
 
-
+		//这里我们首先将渲染操作渲染到帧缓冲里，然后再将帧缓冲附加的纹理渲染到屏幕上
+		//因为这个帧缓冲绑定了纹理，所以所有的渲染操作将会写入到这个绑定的纹理里，即离屏渲染
+		//而最后因为帧缓冲不是默认的帧缓冲，所以我们需要将这个已经渲染好的视觉效果，通过附加的纹理再渲染到屏幕上
         // render
         // ------
         // bind to framebuffer and draw scene as we normally would to color texture 
         glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
         glEnable(GL_DEPTH_TEST); // enable depth testing (is disabled for rendering screen-space quad)
 
+		//第一步离屏渲染
         // make sure we clear the framebuffer's content
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -269,10 +277,11 @@ int main()
         glDrawArrays(GL_TRIANGLES, 0, 6);
         glBindVertexArray(0);
 
-        // now bind back to default framebuffer and draw a quad plane with the attached framebuffer color texture
+		//第二步将渲染好的离屏渲染绑定的纹理再渲染到屏幕上
+        //// now bind back to default framebuffer and draw a quad plane with the attached framebuffer color texture
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         glDisable(GL_DEPTH_TEST); // disable depth test so screen-space quad isn't discarded due to depth test.
-        // clear all relevant buffers
+        //// clear all relevant buffers
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // set clear color to white (not really necessery actually, since we won't be able to see behind the quad anyways)
         glClear(GL_COLOR_BUFFER_BIT);
 

@@ -23,6 +23,16 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2_1.colors", "2.lighting\2_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3_1.model_loading", "3.model_loading\3_1.model_loading\3_1.model_loading.vcxproj", "{9413A687-D5BE-4433-9481-605692D4412C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4_3.1.blending_discard", "4.advanced_opengl\4_3.1.blending_discard\4_3.1.blending_discard.vcxproj", "{9FAEE29A-88EF-4F40-ADB1-E0779030700C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4_3.2.blending_sort", "4.advanced_opengl\4_3.2.blending_sort\4_3.2.blending_sort.vcxproj", "{8FC11786-045D-41FA-891D-5549FF8F141D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4_5.1.framebuffers", "4.advanced_opengl\4_5.1.framebuffers\4_5.1.framebuffers.vcxproj", "{BB3940F6-61C4-4867-886E-0CD6BD4A9C9B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4_6.1.cubemaps_skybox", "4.advanced_opengl\4_6.1.cubemaps_skybox\4_6.1.cubemaps_skybox.vcxproj", "{18DC9B47-3976-4BBA-A70E-81C7404792BC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4_6.3.cubemaps_skybox_reflect", "4.advanced_opengl\4_6.3.cubemaps_skybox_reflect\4_6.3.cubemaps_skybox_reflect.vcxproj", "{B7B65E80-846C-4BCC-8B0F-BD05F82A2FF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -73,6 +83,26 @@ Global
 		{9413A687-D5BE-4433-9481-605692D4412C}.Debug|Win32.Build.0 = Debug|Win32
 		{9413A687-D5BE-4433-9481-605692D4412C}.Release|Win32.ActiveCfg = Release|Win32
 		{9413A687-D5BE-4433-9481-605692D4412C}.Release|Win32.Build.0 = Release|Win32
+		{9FAEE29A-88EF-4F40-ADB1-E0779030700C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9FAEE29A-88EF-4F40-ADB1-E0779030700C}.Debug|Win32.Build.0 = Debug|Win32
+		{9FAEE29A-88EF-4F40-ADB1-E0779030700C}.Release|Win32.ActiveCfg = Release|Win32
+		{9FAEE29A-88EF-4F40-ADB1-E0779030700C}.Release|Win32.Build.0 = Release|Win32
+		{8FC11786-045D-41FA-891D-5549FF8F141D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8FC11786-045D-41FA-891D-5549FF8F141D}.Debug|Win32.Build.0 = Debug|Win32
+		{8FC11786-045D-41FA-891D-5549FF8F141D}.Release|Win32.ActiveCfg = Release|Win32
+		{8FC11786-045D-41FA-891D-5549FF8F141D}.Release|Win32.Build.0 = Release|Win32
+		{BB3940F6-61C4-4867-886E-0CD6BD4A9C9B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BB3940F6-61C4-4867-886E-0CD6BD4A9C9B}.Debug|Win32.Build.0 = Debug|Win32
+		{BB3940F6-61C4-4867-886E-0CD6BD4A9C9B}.Release|Win32.ActiveCfg = Release|Win32
+		{BB3940F6-61C4-4867-886E-0CD6BD4A9C9B}.Release|Win32.Build.0 = Release|Win32
+		{18DC9B47-3976-4BBA-A70E-81C7404792BC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{18DC9B47-3976-4BBA-A70E-81C7404792BC}.Debug|Win32.Build.0 = Debug|Win32
+		{18DC9B47-3976-4BBA-A70E-81C7404792BC}.Release|Win32.ActiveCfg = Release|Win32
+		{18DC9B47-3976-4BBA-A70E-81C7404792BC}.Release|Win32.Build.0 = Release|Win32
+		{B7B65E80-846C-4BCC-8B0F-BD05F82A2FF1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B7B65E80-846C-4BCC-8B0F-BD05F82A2FF1}.Debug|Win32.Build.0 = Debug|Win32
+		{B7B65E80-846C-4BCC-8B0F-BD05F82A2FF1}.Release|Win32.ActiveCfg = Release|Win32
+		{B7B65E80-846C-4BCC-8B0F-BD05F82A2FF1}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

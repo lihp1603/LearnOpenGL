@@ -59,7 +59,7 @@ int main()
     glfwSetScrollCallback(window, scroll_callback);
 
     // tell GLFW to capture our mouse
-    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    //glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     // glad: load all OpenGL function pointers
     // ---------------------------------------
@@ -75,7 +75,10 @@ int main()
 
     // build and compile shaders
     // -------------------------
-    Shader ourShader("1.model_loading.vs", "1.model_loading.fs");
+    //Shader ourShader("1.model_loading.vs", "1.model_loading.fs");
+	Shader ourShader("F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\3.model_loading\\1.model_loading\\1.model_loading.vs", 
+					 "F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\3.model_loading\\1.model_loading\\1.model_loading.fs");
+	
 
     // load models
     // -----------
@@ -117,7 +120,9 @@ int main()
         glm::mat4 model;
         model = glm::translate(model, glm::vec3(0.0f, -1.75f, 0.0f)); // translate it down so it's at the center of the scene
         model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));	// it's a bit too big for our scene, so scale it down
-        ourShader.setMat4("model", model);
+		float angle = 180.0f;
+		model = glm::rotate(model,glm::radians(angle),glm::vec3(0.0,1.0,0.0));
+		ourShader.setMat4("model", model);
         ourModel.Draw(ourShader);
 
 

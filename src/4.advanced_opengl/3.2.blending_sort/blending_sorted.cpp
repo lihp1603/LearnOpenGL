@@ -61,7 +61,7 @@ int main()
     glfwSetScrollCallback(window, scroll_callback);
 
     // tell GLFW to capture our mouse
-    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    //glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     // glad: load all OpenGL function pointers
     // ---------------------------------------
@@ -79,7 +79,10 @@ int main()
 
     // build and compile shaders
     // -------------------------
-    Shader shader("3.2.blending.vs", "3.2.blending.fs");
+    //Shader shader("3.2.blending.vs", "3.2.blending.fs");
+	Shader shader("F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\4.advanced_opengl\\3.2.blending_sort\\3.2.blending.vs",
+		"F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\4.advanced_opengl\\3.2.blending_sort\\3.2.blending.fs");
+	
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -190,14 +193,20 @@ int main()
 
     // transparent window locations
     // --------------------------------
-    vector<glm::vec3> windows
+    /*vector<glm::vec3> windows
     {
         glm::vec3(-1.5f, 0.0f, -0.48f),
         glm::vec3( 1.5f, 0.0f, 0.51f),
         glm::vec3( 0.0f, 0.0f, 0.7f),
         glm::vec3(-0.3f, 0.0f, -2.3f),
         glm::vec3( 0.5f, 0.0f, -0.6f)
-    };
+    };*/
+	vector<glm::vec3> windows;
+	windows.push_back(glm::vec3(-1.5f, 0.0f, -0.48f));
+	windows.push_back(glm::vec3( 1.5f, 0.0f, 0.51f));
+	windows.push_back(glm::vec3( 0.0f, 0.0f, 0.7f));
+	windows.push_back(glm::vec3(-0.3f, 0.0f, -2.3f));
+	windows.push_back(glm::vec3( 0.5f, 0.0f, -0.6f));
 
     // shader configuration
     // --------------------

@@ -78,8 +78,12 @@ int main()
 
     // build and compile shaders
     // -------------------------
-    Shader shader("6.1.cubemaps.vs", "6.1.cubemaps.fs");
-    Shader skyboxShader("6.1.skybox.vs", "6.1.skybox.fs");
+	/*Shader shader("6.1.cubemaps.vs", "6.1.cubemaps.fs");
+	Shader skyboxShader("6.1.skybox.vs", "6.1.skybox.fs");*/
+	Shader shader("F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\4.advanced_opengl\\6.1.cubemaps_skybox\\6.1.cubemaps.vs", 
+		"F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\4.advanced_opengl\\6.1.cubemaps_skybox\\6.1.cubemaps.fs");
+	Shader skyboxShader("F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\4.advanced_opengl\\6.1.cubemaps_skybox\\6.1.skybox.vs", 
+		"F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\4.advanced_opengl\\6.1.cubemaps_skybox\\6.1.skybox.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -197,7 +201,7 @@ int main()
     // -------------
     unsigned int cubeTexture = loadTexture(FileSystem::getPath("resources/textures/marble.jpg").c_str());
 
-    vector<std::string> faces
+    /*vector<std::string> faces
     {
         FileSystem::getPath("resources/textures/skybox/right.jpg"),
         FileSystem::getPath("resources/textures/skybox/left.jpg"),
@@ -205,7 +209,15 @@ int main()
         FileSystem::getPath("resources/textures/skybox/bottom.jpg"),
         FileSystem::getPath("resources/textures/skybox/front.jpg"),
         FileSystem::getPath("resources/textures/skybox/back.jpg")
-    };
+    };*/
+	vector<std::string> faces;
+	faces.push_back(FileSystem::getPath("resources/textures/skybox/right.jpg"));
+	faces.push_back(FileSystem::getPath("resources/textures/skybox/left.jpg"));
+	faces.push_back(FileSystem::getPath("resources/textures/skybox/top.jpg"));
+	faces.push_back(FileSystem::getPath("resources/textures/skybox/bottom.jpg"));
+	faces.push_back(FileSystem::getPath("resources/textures/skybox/front.jpg"));
+	faces.push_back(FileSystem::getPath("resources/textures/skybox/back.jpg"));		
+	
     unsigned int cubemapTexture = loadCubemap(faces);
 
     // shader configuration

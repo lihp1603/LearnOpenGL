@@ -12,6 +12,9 @@
 #include <learnopengl/model.h>
 
 #include <iostream>
+#include <vector>
+
+using namespace std;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
@@ -77,7 +80,10 @@ int main()
 
      // build and compile shaders
     // -------------------------
-    Shader shader("3.1.blending.vs", "3.1.blending.fs");
+    //Shader shader("3.1.blending.vs", "3.1.blending.fs");
+	Shader shader("F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\4.advanced_opengl\\3.1.blending_discard\\3.1.blending.vs", 
+				  "F:\\Media\\OpenGL\\tutorials\\LearnOpenGL\\src\\4.advanced_opengl\\3.1.blending_discard\\3.1.blending.fs");
+	
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -188,18 +194,24 @@ int main()
 
     // transparent vegetation locations
     // --------------------------------
-    vector<glm::vec3> vegetation 
-    {
+    /*vector<glm::vec3> vegetation={
         glm::vec3(-1.5f, 0.0f, -0.48f),
         glm::vec3( 1.5f, 0.0f, 0.51f),
         glm::vec3( 0.0f, 0.0f, 0.7f),
         glm::vec3(-0.3f, 0.0f, -2.3f),
         glm::vec3 (0.5f, 0.0f, -0.6f)
-    };
+	};*/
+	vector<glm::vec3> vegetation;
+	vegetation.push_back(glm::vec3(-1.5f, 0.0f, -0.48f));
+	vegetation.push_back(glm::vec3( 1.5f, 0.0f, 0.51f));
+	vegetation.push_back(glm::vec3( 0.0f, 0.0f, 0.7f));
+	vegetation.push_back(glm::vec3(-0.3f, 0.0f, -2.3f));
+	vegetation.push_back(glm::vec3 (0.5f, 0.0f, -0.6f));
 
     // shader configuration
     // --------------------
     shader.use();
+	//设置纹理单元索引
     shader.setInt("texture1", 0);
 
     // render loop
@@ -230,7 +242,7 @@ int main()
         shader.setMat4("view", view);
         // cubes
         glBindVertexArray(cubeVAO);
-        glActiveTexture(GL_TEXTURE0);
+        //glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, cubeTexture);
         model = glm::translate(model, glm::vec3(-1.0f, 0.0f, -1.0f));
         shader.setMat4("model", model);
@@ -248,6 +260,7 @@ int main()
         // vegetation
         glBindVertexArray(transparentVAO);
         glBindTexture(GL_TEXTURE_2D, transparentTexture);
+		//glDrawArrays(GL_TRIANGLES, 0, 6);
         for (GLuint i = 0; i < vegetation.size(); i++)
         {
             model = glm::mat4();
@@ -255,7 +268,6 @@ int main()
             shader.setMat4("model", model);
             glDrawArrays(GL_TRIANGLES, 0, 6);
         }
-
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
