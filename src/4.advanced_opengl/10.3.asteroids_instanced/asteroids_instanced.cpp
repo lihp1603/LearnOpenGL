@@ -76,8 +76,12 @@ int main()
 
     // build and compile shaders
     // -------------------------
-    Shader asteroidShader("10.3.asteroids.vs", "10.3.asteroids.fs");
-    Shader planetShader("10.3.planet.vs", "10.3.planet.fs");
+    //Shader asteroidShader("10.3.asteroids.vs", "10.3.asteroids.fs");
+    //Shader planetShader("10.3.planet.vs", "10.3.planet.fs");
+	Shader asteroidShader(FileSystem::getPath("src/4.advanced_opengl/10.3.asteroids_instanced/10.3.asteroids.vs").c_str(),
+		FileSystem::getPath("src/4.advanced_opengl/10.3.asteroids_instanced/10.3.asteroids.fs").c_str());
+	Shader planetShader(FileSystem::getPath("src/4.advanced_opengl/10.3.asteroids_instanced/10.3.planet.vs").c_str(),
+		FileSystem::getPath("src/4.advanced_opengl/10.3.asteroids_instanced/10.3.planet.fs").c_str());
 
     // load models
     // -----------

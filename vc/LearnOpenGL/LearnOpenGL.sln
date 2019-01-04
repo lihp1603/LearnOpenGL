@@ -33,6 +33,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4_6.1.cubemaps_skybox", "4.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4_6.3.cubemaps_skybox_reflect", "4.advanced_opengl\4_6.3.cubemaps_skybox_reflect\4_6.3.cubemaps_skybox_reflect.vcxproj", "{B7B65E80-846C-4BCC-8B0F-BD05F82A2FF1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4_9.2.geometry_shader_exploding", "4.advanced_opengl\4_9.2.geometry_shader_exploding\4_9.2.geometry_shader_exploding.vcxproj", "{DD45C928-DE29-4B2E-AC7F-FBC6A2768107}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4_10.3.asteroids_instanced", "4.advanced_opengl\4_10.3.asteroids_instanced\4_10.3.asteroids_instanced.vcxproj", "{8CF08264-9F7F-4DBE-B519-844FB646D4F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -103,6 +107,14 @@ Global
 		{B7B65E80-846C-4BCC-8B0F-BD05F82A2FF1}.Debug|Win32.Build.0 = Debug|Win32
 		{B7B65E80-846C-4BCC-8B0F-BD05F82A2FF1}.Release|Win32.ActiveCfg = Release|Win32
 		{B7B65E80-846C-4BCC-8B0F-BD05F82A2FF1}.Release|Win32.Build.0 = Release|Win32
+		{DD45C928-DE29-4B2E-AC7F-FBC6A2768107}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DD45C928-DE29-4B2E-AC7F-FBC6A2768107}.Debug|Win32.Build.0 = Debug|Win32
+		{DD45C928-DE29-4B2E-AC7F-FBC6A2768107}.Release|Win32.ActiveCfg = Release|Win32
+		{DD45C928-DE29-4B2E-AC7F-FBC6A2768107}.Release|Win32.Build.0 = Release|Win32
+		{8CF08264-9F7F-4DBE-B519-844FB646D4F6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8CF08264-9F7F-4DBE-B519-844FB646D4F6}.Debug|Win32.Build.0 = Debug|Win32
+		{8CF08264-9F7F-4DBE-B519-844FB646D4F6}.Release|Win32.ActiveCfg = Release|Win32
+		{8CF08264-9F7F-4DBE-B519-844FB646D4F6}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

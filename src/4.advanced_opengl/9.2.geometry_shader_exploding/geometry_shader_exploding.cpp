@@ -76,7 +76,10 @@ int main()
 
     // build and compile shaders
     // -------------------------
-    Shader shader("9.2.geometry_shader.vs", "9.2.geometry_shader.fs", "9.2.geometry_shader.gs");
+	//Shader shader("9.2.geometry_shader.vs", "9.2.geometry_shader.fs", "9.2.geometry_shader.gs");
+	Shader shader(FileSystem::getPath("src/4.advanced_opengl/9.2.geometry_shader_exploding/9.2.geometry_shader.vs").c_str(), 
+				  FileSystem::getPath("src/4.advanced_opengl/9.2.geometry_shader_exploding/9.2.geometry_shader.fs").c_str(), 
+				  FileSystem::getPath("src/4.advanced_opengl/9.2.geometry_shader_exploding/9.2.geometry_shader.gs").c_str());
 
     // load models
     // -----------
