@@ -3,6 +3,8 @@ bin/
 build/
 Debug/*
 ipch/*
+vc/LearnOpenGL/Debug/*
+*.suo
 *.opensdf
 *.sdf
 *.log

@@ -163,7 +163,7 @@ int main()
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
-
+		std::cout<<"time:"<<currentFrame<<"; delta time:"<<deltaTime<<std::endl;
         // input
         // -----
         processInput(window);
